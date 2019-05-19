@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.logos{
+    width:24px;
+    height:24px;
+  }
+
+#intro{
+    padding-left: 1.2em;
+    padding-top: 1.2em;
+}
+
+.fab{
+    padding-right: 1em;
+}
+
+.card-body{
+    background-color: #d9dce0;
+}
+
+.text-muted{
+    background-color: white;
+}
+
+.card-deck{
+    /* padding:.5em; */
+    margin:.5em;
+}
+hr{
+    background-color: white;
+    height: 1.5px;;
+}
+
+
+
