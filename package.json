@@ -1,10 +1,13 @@
 {
   "name": "port-site",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
+    "nodemailer": "^6.2.1",
     "path": "^0.12.7"
   },
   "devDependencies": {},
@@ -13,5 +16,6 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }

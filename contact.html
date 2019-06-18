@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JF Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type='text/javascript'>
+        function handleClick (event) {
+            event.preventDefault();
+            var data= {
+                eBody: event.target.eBody.value,
+                rName: event.target.rName.value,
+                rEmail: event.target.rEmail.value
+            };
+            console.log('worked')
+        var url = 'http://localhost:3000/contact/';
+        // var url = 'https://contact-5811.herokuapp.com/contact';
+        fetch(url, {
+            method:'post',
+            body: JSON.stringify(data),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+        .then(response => console.log('sucess:', JSON.stringify(response)))
+        .catch(error => console.error('error:', error));
+        };
+    </script>
+</head>
+<body>
+    <div class='container'>
+        <div class='col-md-8'>
+            <div>
+                <h1>
+                    contact us with your questions
+                </h1>
+            </div>
+            <form onsubmit='handleClick(event)'>
+                <div class='form-group'>
+                    <label htmlFor='eBody'>Email Body: </label>
+                    <br/>
+                    <textarea
+                        class='form-control'
+                        id='ebody'
+                        rows='10'
+                        name='eBody'
+                        placeholder='Please enter your question here'
+                        required></textarea>
+                </div>
+                <div class='form-group'>
+                    <label htmlFor='rName'>Name: </label>
+                    <br/>
+                    <input
+                        class='form-control'
+                        id='rName'
+                        name='rName'
+                        type='text'
+                        placeholder='name'
+                        required
+                    >
+                    </input>
+                </div>
+                <div class='form-group'>
+                    <label htmlFor='rEmail'>Email for response: </label>
+                    <br/>
+                    <input
+                        class='form-control'
+                        id='rEmail'
+                        name='rEmail'
+                        type='email'
+                        placeholder='Enter email here'
+                        required
+                    >
+                    </input>
+                </div>
+                <button
+                    class='btn btn-primary btn-block'
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
