@@ -61,18 +61,21 @@
         <div class="card">
             <img class="card-img-top" src="/eor.png" alt="EOR search page">
             <div class="card-body">
-                <h5 class="card-title">Explanation of Review Lookup Application (Work in Progress)</h5>
+                <h5 class="card-title">Medical Bill Status Application (Work in Progress)</h5>
                 <a class='card-link' href="https://eor-client-5811.herokuapp.com//" target='_blank'>Go to the site</a>
-                <a class='card-link' href="https://github.com/Johnny-Free/eor" target='_blank'>Go to the GitHub</a>
+                <a class='card-link' href="https://github.com/Johnny-Free/eor-client" target='_blank'>Go to the GitHub (Client)</a>
+                <a class='card-link' href="https://github.com/Johnny-Free/eor-api" target='_blank'>Go to the GitHub (API)</a>
                 <hr>
                 <p class="card-text">
-                    This application was developed with React, NodeJs and ***Email client***. </br></br>
-                    The application was developed as an explanation of review look up for medical providers. 
-                    This allows the medical provider to perform a search with specific criteria only known to them. 
-                    The results would be an electronic explanation of review. For the insurance carrier this cuts down 
-                    on the number of calls seeking status of an audit and also reduces the need for the insurance carrier 
-                    to work request for copies of explanation of review. When an explanation of review is not found the 
-                    medical provider can submit a request for a copy to be emailed to them
+                    This application was developed with React, NodeJs, nodemail and Postgres . </br></br>
+                    The intent of this application was to give medical providers a portal to search
+                    for medical audits to determin if the insurance carrier received the bill, where it 
+                    was in the process and obtain a copy of an explaination of review if the audit was 
+                    complete. If the explanation of review is not in the system due to age the medical provider
+                    can email directly from the application a copy request. Typicaly providers call the insurance 
+                    carriers requesting this information and depending on the carrier there can be long waits. 
+                    On the carrier's side this frees staff from having to answer phone calls and faxing/emailing 
+                    copies of explaination of reviews.
                 </p>
             </div>
         </div>
