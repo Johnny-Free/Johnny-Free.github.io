@@ -37,5 +37,24 @@ hr{
     height: 1.5px;;
 }
 
+#aboutIntro{
+    /*border-top: .1em gray solid;*/
+    /*border-bottom: .1em gray solid;*/
+    /*border-right: .1em gray solid;*/
+    width: 66%;
+    float: left;
+    padding-left: 1.2em;
+}
+
+#aboutPic1{
+    border-radius: 50%;
+    height: 8em;
+}
+
+#historyFirst{
+    float: left;
+    width: 66%;
+    height: 15em;
+}
 
 
